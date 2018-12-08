@@ -1,0 +1,8 @@
+<div>
+  <h1>Your Todoist projects</h1>
+  <ul class="projects">
+    <li *ngFor="let project of projects" (click)="onSelect(project)">
+      <a routerLink="/project/{{project.id}}">{{project.name}}</a>
+    </li>
+  </ul>
+</div>

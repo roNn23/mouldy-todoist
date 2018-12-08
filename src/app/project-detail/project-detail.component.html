@@ -1,0 +1,17 @@
+<button (click)="goBack()">go back</button>
+
+<div *ngIf="project">
+  <h1>The Tasks of {{project.name}}</h1>
+  <ul>
+    <li *ngFor="let item of items" >
+      <div class="box box-priority{{item.priority}}">
+        <h2>{{item.content}}</h2>
+        <b>Age: <span>{{item.date_added | amTimeAgo:true}}</span></b><br>
+        Date-String: <span>{{item.date_string}}</span><br>
+        <button (click)="deleteTask(item.id)" [disabled]="deletionInProgress">Delete it</button>
+      </div>
+    </li>
+  </ul>
+</div>
+
+
