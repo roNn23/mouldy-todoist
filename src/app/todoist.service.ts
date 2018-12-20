@@ -1,4 +1,4 @@
-import { config } from '../config';
+import { config } from '../../config';
 import { Injectable } from '@angular/core';
 import TodoistAPI from 'todoist-js'
 
